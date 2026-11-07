@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+html:root {
+  --brand-primary: #2f5d3a;
+  --brand-primary-contrast: #ffffff;
+  --brand-accent: #b8862b;
+  --brand-ink: #1f2a22;
+  --brand-bg: #f7f3e8;
+  --brand-surface: #fffdf7;
+  --brand-text: #1f2a22;
+  --brand-text-muted: #4f5b52;
+  --brand-border: #ddd5c2;
+  --brand-radius-sm: 4px;
+  --brand-radius-md: 8px;
+  --brand-radius-lg: 12px;
+  --brand-radius-full: 9999px;
+  --brand-heading-font: ui-sans-serif, system-ui, "Helvetica Neue", Arial, sans-serif;
+  --brand-body-font: Georgia, "Iowan Old Style", "Times New Roman", serif;
+}
+
+body {
+  font-family: var(--brand-body-font), Georgia, serif;
+}
+
+.note h2 {
+  font-family: var(--brand-heading-font), system-ui, sans-serif;
+}
+
+.note a {
+  color: var(--brand-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.note a:hover {
+  color: #1e3f27;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}

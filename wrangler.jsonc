@@ -1,0 +1,21 @@
+{
+  "name": "site-ohio-tax-certificate-returns",
+  "main": ".open-next/worker.js",
+  "tail_consumers": [{ "service": "aapastech-security-log-tail" }],
+  "compatibility_date": "2025-04-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "kv_namespaces": [
+    { "binding": "NEXT_INC_CACHE_KV", "id": "61fa93d28c05411591ad6a5de190cc60" }
+  ],
+  "services": [
+    { "binding": "WORKER_SELF_REFERENCE", "service": "site-ohio-tax-certificate-returns" }
+  ],
+  "durable_objects": {
+    "bindings": [{ "name": "NEXT_CACHE_DO_QUEUE", "class_name": "DOQueueHandler" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["DOQueueHandler"] }]
+}
